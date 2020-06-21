@@ -1,0 +1,48 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Meme Maker Page</title>
+</head>
+
+<body>
+    <h1>Welcome to Ashley's Meme Maker Page</h1>
+    <div>
+        <!--SVG-->
+        <!--Form Input-->
+        <h2>Input</h2>
+        <div class="section">
+            <form>
+                <label for="pic">Upload Image: </label>
+                <input type="file" accept="image/*" id="pic" onchange="loadFile(event)" name="picture" /><br />
+                <label for="topTxt">Top Text</label><br />
+                <input type="text" id="topTxt" name="topTxt" /><br />
+                <label for="btmTxt">Bottom Text</label><br />
+                <input type="text" id="btmTxt" name="btmTxt" /><br />
+            </form>
+        </div>
+
+        <div class="table">
+            <div>
+                <p>Preview</p>
+                <svg height="400" width="500">
+                    <image xlinkHref="image-path" />
+                    <text id="tpTxtSVG" onchange="" y="20" x=100></text>
+                    <text id="btmTxtSVG" y="350" x=100></text>
+                </svg>
+            </div>
+
+            <div>
+                <p>Image</p>
+                <!--Image-->
+                <img id="output" height="400" width="500" />
+            </div>
+
+            <div>
+                <p>Download this Image</p>
+                <!--Canvas-->
+                <canvas id="final" height="400" width="500"></canvas>
+                <button id="dl" href="#">Download Canvas</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="logic.js"></script>
